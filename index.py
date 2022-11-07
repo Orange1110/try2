@@ -66,7 +66,7 @@ def read():
         docs = collection_ref.get()
         for doc in docs:
             dict = doc.to_dict()
-            if keyword in dict["Course"] or Leacture in dict["Leacture"]:
+            if (keyword in dict["Course"] and Leacture in dict["Leacture"]) or(keyword in dict["Course"]) or (Leacture in dict["Leacture"]):
                 result += format(dict["Leacture"])+"老師開的"+format(dict["Course"])+"課程,每週"+format(dict["Time"])+"於"+format(dict["Room"])+"上課<br>"
            
         if result == "":
