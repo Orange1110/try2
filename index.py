@@ -68,8 +68,8 @@ def read():
             if keyword in dict["Course"]:
                 result += format(dict["Leacture"])+"老師開的"+format(dict["Course"])+"課程,每週"+format(dict["Time"])+"於"+format(dict["Room"])+"上課<br>"
            
-           if result == ""
-                result = "抱歉，查無相關條件的選修課程"
+                if result == ""
+                    result = "抱歉，查無相關條件的選修課程"
 
         return result
     else:
